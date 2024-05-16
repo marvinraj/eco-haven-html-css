@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* colors - https://modernmoonquiltstudio.com/7-exciting-color-palettes-for-minimalist-quilters/
+#37443C - forest night
+#E9DCC9 - white linen
+#f7ecba - vanilla custard
+#716453 - toasted walnut
+#CDBC7E - dried moss
+
+*/
+body{
+    background-color: #faf8f1;
+    color: #37443C;
+}
+
+header{
+    background-color: #faf8f1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 170px;
+}
+
+.logo{
+    color: #37443C;
+    font-weight: 800;
+    font-size: 35px;
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar a{
+    color: #37443C;
+    font-size: 16px;
+    padding: 10px 20px;
+}
