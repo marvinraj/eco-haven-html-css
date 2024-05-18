@@ -3,37 +3,50 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
+    scroll-behavior: smooth;
     list-style: none;
     text-decoration: none;
 }
 
-/* colors - https://modernmoonquiltstudio.com/7-exciting-color-palettes-for-minimalist-quilters/
-#37443C - forest night
-#E9DCC9 - white linen
-#f7ecba - vanilla custard
-#716453 - toasted walnut
-#CDBC7E - dried moss
-
-*/
-body{
-    background-color: #faf8f1;
-    color: #37443C;
+:root{
+    --highlight-color: #C40C0C;
+    --text-color: #102C57;
+    --bg-color: #FEFAF6;
 }
 
+*::selection{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+hr{
+    margin: 0 600px;
+    height: 0.5px;
+    background-color: #c2c0c0;
+    border: none;
+}
+
+/* NAVBAR */
 header{
-    background-color: #faf8f1;
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 30px 170px;
+    background-color: var(--bg-color);
 }
 
 .logo{
-    color: #37443C;
+    color: var(--text-color);
     font-weight: 800;
     font-size: 35px;
 }
@@ -43,7 +56,143 @@ header{
 }
 
 .navbar a{
-    color: #37443C;
-    font-size: 16px;
+    color: var(--text-color);
+    font-size: 14px;
+    padding: 10px 30px;
+    font-weight: 500;
+}
+
+.navbar a:hover{
+    color: var(--highlight-color);
+    transition: .4s;
+}
+
+#menu-icon{
+    font-size: 27px;
+    cursor: pointer;
+    display: none;
+}
+
+/* HOME */
+section{
+    padding: 10px 20%;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.home{
+    width: 100%;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-gap: 1.5rem;
+}
+
+.home-img img{
+    max-width: 100%;
+    width: 450px;
+    height: auto;
+    border-radius: 5%;
+}
+
+.home-info h1{
+    font-size: 55px;
+}
+
+.btn{
+    display: inline-block;
     padding: 10px 20px;
+    margin-top: 30px;
+    background-color: var(--highlight-color);
+    color: var(--bg-color);
+    border-radius: 10%;
+}
+.btn:hover{
+    background-color: var(--bg-color);
+    color: var(--highlight-color);
+    border-color: var(--highlight-color);
+    border: solid;
+}
+
+/* WELCOME */
+.welcome{
+    text-align: center;
+}
+
+.welcome h1{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.welcome p{
+    font-size: 19px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.welcome span{
+    color: var(--highlight-color);
+    font-weight: 600;
+}
+
+/* home & living */
+.title-heading h1{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.title-heading p{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+.living-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.card{
+    position: relative;
+    margin-top: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.living-img{
+    width: 320px;
+    height: 450px;
+}
+
+.living-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.card h3{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.card h5{
+    color: var(--highlight-color);
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+/* fashion */
+.fashion .title-heading{
+    text-align: end;
 }
