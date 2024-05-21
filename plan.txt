@@ -1,0 +1,5 @@
+1. categorize all fonts and colors then work and media queries
+https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp
+https://stackoverflow.com/questions/76171419/how-to-specify-css-media-query-breakpoints
+
+

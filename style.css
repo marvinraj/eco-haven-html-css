@@ -12,6 +12,10 @@
     --highlight-color: #C40C0C;
     --text-color: #102C57;
     --bg-color: #FEFAF6;
+    --divider-color: #c2c0c0; 
+    --big-font: 60px;
+    --medium-font: 45px;
+    --title-p-font: 18px;
 }
 
 *::selection{
@@ -27,11 +31,11 @@ body{
 hr{
     margin: 0 600px;
     height: 0.5px;
-    background-color: #c2c0c0;
+    background-color: var(--divider-color);
     border: none;
 }
 
-/* NAVBAR */
+/* navbar */
 header{
     position: fixed;
     top: 0;
@@ -55,19 +59,19 @@ header{
     transition: 1.5s;
 }
 
-.navbar{
+header .navbar{
     display: flex;
 }
 
-.navbar a{
+header .navbar a{
     color: var(--text-color);
-    font-size: 15px;
+    font-size: 12px;
     padding: 10px 30px;
     font-weight: 500;
     letter-spacing: 1px;
 }
 
-.navbar a:hover{
+header .navbar a:hover{
     color: var(--highlight-color);
     transition: 0.5s;
 }
@@ -78,7 +82,7 @@ header{
     display: none;
 }
 
-/* HOME */
+/* home/landing */
 section{
     padding: 10px 20%;
     margin-top: 75px;
@@ -102,7 +106,7 @@ section{
 }
 
 .home-info h1{
-    font-size: 60px;
+    font-size: var(--big-font);
 }
 
 .btn{
@@ -111,7 +115,6 @@ section{
     margin-top: 30px;
     background-color: var(--highlight-color);
     color: var(--bg-color);
-    border-radius: 10%;
 }
 .btn:hover{
     background-color: var(--bg-color);
@@ -120,18 +123,18 @@ section{
     border: solid;
 }
 
-/* WELCOME */
+/* welcome */
 .welcome{
     text-align: center;
 }
 
 .welcome h1{
-    font-size: 45px;
+    font-size: var(--medium-font);
     margin-bottom: 20px;
 }
 
 .welcome p{
-    font-size: 19px;
+    font-size: var(--title-p-font);
     font-weight: 400;
     font-style: italic;
     line-height: 1.5;
@@ -143,19 +146,20 @@ section{
     font-weight: 600;
 }
 
-/* home & living */
+/* home & living and waste */
 .title-heading h1{
-    font-size: 45px;
+    font-size: var(--medium-font);
     margin-bottom: 20px;
 }
 
 .title-heading p{
-    font-size: 18px;
+    font-size: var(--title-p-font);
     font-weight: 400;
     margin-bottom: 20px;
     line-height: 1.5;
     letter-spacing: 1px;
 }
+
 .content-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, auto));
@@ -197,8 +201,8 @@ section{
     margin-top: 10px;
     font-weight: 400;
     letter-spacing: 1px;
+    font-size: 14px;
 }
-
 /* waste */
 .waste .title-heading{
     text-align: end;
@@ -213,11 +217,11 @@ section{
     width: 80%;
 }
 .newsletter h1{
-    font-size: 45px;
+    font-size: var(--medium-font);
     margin-bottom: 20px;
 }
 .newsletter p{
-    font-size: 18px;
+    font-size: var(--title-p-font);
     font-weight: 400;
     margin-bottom: 20px;
     line-height: 1.5;
@@ -239,7 +243,7 @@ input{
 
 .footer-container h1{
     color: var(--highlight-color);
-    font-size: 45px;
+    font-size: var(--medium-font);
     margin-bottom: 20px;
 }
 
@@ -281,3 +285,190 @@ input{
     padding: 10px;
     letter-spacing: 1px;
 }
+
+/* media queries */
+
+/* xs */
+@media (max-width: 475px) {
+    
+}
+/* sm */
+@media (max-width: 640px) {
+    .home{
+        text-align: center;
+    }
+    .home-img{
+        margin-top: 20px;
+    }
+    .home-img img{
+        width: 350px;
+    }
+}
+/* md */
+@media (max-width: 768px) {
+    :root{
+        --big-font: 30px;
+        --medium-font: 25px;
+        --title-p-font: 12px;
+    }
+    #menu-icon{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: -400px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: #274a7f;
+        transition: 0.5s;
+    }
+    header .navbar a{
+        padding: 35px;
+        display: block;
+    }
+    header{
+        padding: 15px 50px;
+    }
+    .home{
+        margin-top: 100px;
+        min-height: 50vh;
+    }
+    section{
+        padding: 10px 20%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .content-container{
+        display: grid;
+        align-items: center;
+    }
+    .content-img{
+        width: 225px;
+        height: 300px;
+    }
+    .card h3{
+        font-size: 9px;
+    }
+    .card h5{
+        font-size: 8px;
+    }
+    .btn{
+        padding: 8px 14px;
+        margin-top: 20px;
+        font-size: 8px;
+    }
+    input{
+        padding: 8px 14px;
+        font-size: 10px;
+    }
+    hr{
+        margin: 0 250px;
+        height: 0.5px;
+    }
+}
+/* lg */
+@media (min-width: 1024px) {
+    :root{
+        --big-font: 45px;
+        --medium-font: 35px;
+        --title-p-font: 14px;
+    }
+    #menu-icon{
+        display: none;
+    }
+    header{
+        padding: 15px 80px;
+    }
+    header .navbar a{
+        font-size: 9px;
+        padding: 5px 15px;
+    }
+    .home{
+        min-height: 90vh;
+    }
+    section{
+        padding: 10px 20%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .content-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+        grid-gap: 10px;
+        align-items: center;
+    }
+    .content-img{
+        width: 200px;
+        height: 325px;
+    }
+    .card h3{
+        font-size: 10px;
+    }
+    .card h5{
+        font-size: 10px;
+    }
+    .btn{
+        padding: 8px 17px;
+        margin-top: 30px;
+        font-size: 10px;
+    }
+    input{
+        padding: 8px 17px;
+        font-size: 10px;
+    }
+    hr{
+        margin: 0 400px;
+        height: 0.5px;
+    }
+}
+/* xl */
+@media (min-width: 1280px) {
+    :root{
+        --big-font: 50px;
+        --medium-font: 40px;
+        --title-p-font: 16px;
+    }
+    header{
+        padding: 30px 170px;
+    }
+    header .navbar a{
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+    section{
+        padding: 10px 20%;
+        margin-top: 75px;
+        margin-bottom: 75px;
+    }
+    .content-container{
+        grid-gap: 10px;
+    }
+    .content-img{
+        width: 240px;
+        height: 400px;
+    }
+    .card h3{
+        font-size: 12px;
+    }
+    .card h5{
+        font-size: 12px;
+    }
+    .btn{
+        padding: 10px 20px;
+        margin-top: 30px;
+        font-size: 12px;
+    }
+    input{
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
+/* xxl */
+@media (min-width: 1536px) {
+    
+}
+
+
