@@ -76,7 +76,7 @@ header .navbar a:hover{
     transition: 0.5s;
 }
 
-#menu-icon{
+#sidebar{
     font-size: 27px;
     cursor: pointer;
     display: none;
@@ -84,7 +84,7 @@ header .navbar a:hover{
 
 /* home/landing */
 section{
-    padding: 10px 20%;
+    padding: 10px 15%;
     margin-top: 75px;
     margin-bottom: 75px;
 }
@@ -162,8 +162,8 @@ section{
 
 .content-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    grid-gap: 5px;
     align-items: center;
 }
 
@@ -178,8 +178,8 @@ section{
     text-align: center;
 }
 .content-img{
-    width: 290px;
-    height: 425px;
+    width: 240px;
+    height: 350px;
 }
 
 .content-img img{
@@ -287,31 +287,36 @@ input{
 }
 
 /* media queries */
-
-/* xs */
-@media (max-width: 475px) {
-    
-}
-/* sm */
-@media (max-width: 640px) {
-    .home{
-        text-align: center;
+@media (max-width: 1560px){
+    header{
+        padding: 15px 40px;
     }
-    .home-img{
-        margin-top: 20px;
-    }
-    .home-img img{
-        width: 350px;
-    }
-}
-/* md */
-@media (max-width: 768px) {
     :root{
-        --big-font: 30px;
-        --medium-font: 25px;
-        --title-p-font: 12px;
+        --big-font: 55px;
+        --medium-font: 40px;
+        --title-p-font: 16px;
     }
-    #menu-icon{
+    .card h3{
+        font-size: 14px;
+    }
+    
+    .card h5{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1140px){
+    section{
+        padding: 5px 10%;
+        margin-top: 65px;
+        margin-bottom: 65px;
+    }
+    :root{
+        --big-font: 45px;
+        --medium-font: 35px;
+        --title-p-font: 16px;
+    }
+    #sidebar{
         display: initial;
     }
     header .navbar{
@@ -322,153 +327,78 @@ input{
         display: flex;
         flex-direction: column;
         text-align: center;
-        background-color: #274a7f;
-        transition: 0.5s;
+        background-color: #f4efeb;
+        transition: 0.4s;
+    }
+    header .navbar.active{
+        top: 60px;
     }
     header .navbar a{
-        padding: 35px;
+        font-size: 12px;
+        padding: 40px 30px;
         display: block;
     }
-    header{
-        padding: 15px 50px;
-    }
-    .home{
-        margin-top: 100px;
-        min-height: 50vh;
-    }
-    section{
-        padding: 10px 20%;
-        margin-top: 25px;
-        margin-bottom: 25px;
-    }
-    .content-container{
-        display: grid;
-        align-items: center;
-    }
-    .content-img{
-        width: 225px;
-        height: 300px;
-    }
-    .card h3{
-        font-size: 9px;
-    }
-    .card h5{
-        font-size: 8px;
-    }
-    .btn{
-        padding: 8px 14px;
-        margin-top: 20px;
-        font-size: 8px;
-    }
-    input{
-        padding: 8px 14px;
-        font-size: 10px;
-    }
-    hr{
-        margin: 0 250px;
-        height: 0.5px;
-    }
-}
-/* lg */
-@media (min-width: 1024px) {
-    :root{
-        --big-font: 45px;
-        --medium-font: 35px;
-        --title-p-font: 14px;
-    }
-    #menu-icon{
-        display: none;
-    }
-    header{
-        padding: 15px 80px;
-    }
-    header .navbar a{
-        font-size: 9px;
-        padding: 5px 15px;
-    }
-    .home{
-        min-height: 90vh;
-    }
-    section{
-        padding: 10px 20%;
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
-    .content-container{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
-        grid-gap: 10px;
-        align-items: center;
-    }
-    .content-img{
-        width: 200px;
-        height: 325px;
-    }
-    .card h3{
-        font-size: 10px;
-    }
-    .card h5{
-        font-size: 10px;
-    }
-    .btn{
-        padding: 8px 17px;
-        margin-top: 30px;
-        font-size: 10px;
-    }
-    input{
-        padding: 8px 17px;
-        font-size: 10px;
+    .newsletter{
+        margin: 40px auto;
     }
     hr{
         margin: 0 400px;
-        height: 0.5px;
+    }
+    .btn{
+        padding: 8px 18px;
+        margin-top: 20px;
+        font-size: 14px;
     }
 }
-/* xl */
-@media (min-width: 1280px) {
+
+@media (max-width: 720px){
     :root{
-        --big-font: 50px;
-        --medium-font: 40px;
-        --title-p-font: 16px;
-    }
-    header{
-        padding: 30px 170px;
-    }
-    header .navbar a{
-        font-size: 12px;
-        padding: 10px 20px;
+        --big-font: 40px;
+        --medium-font: 30px;
+        --title-p-font: 14px;
     }
     section{
-        padding: 10px 20%;
-        margin-top: 75px;
-        margin-bottom: 75px;
-    }
-    .content-container{
-        grid-gap: 10px;
-    }
-    .content-img{
-        width: 240px;
-        height: 400px;
+        padding: 5px 10%;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
     .card h3{
         font-size: 12px;
     }
+    
     .card h5{
-        font-size: 12px;
+        font-size: 10px;
+    }
+    hr{
+        margin: 0 300px;
     }
     .btn{
-        padding: 10px 20px;
-        margin-top: 30px;
-        font-size: 12px;
-    }
-    input{
-        padding: 10px 20px;
+        padding: 7px 17px;
+        margin-top: 15px;
         font-size: 12px;
     }
 }
-/* xxl */
-@media (min-width: 1536px) {
-    
+
+@media (max-width: 575px){
+    :root{
+        --big-font: 40px;
+        --medium-font: 30px;
+        --title-p-font: 14px;
+    }
+    body{
+        width: 575px;
+        margin: 0 auto;
+    }
+    .home{
+        min-height: 50vh;
+        grid-template-columns: 1fr;
+        margin-top: 90px;
+        text-align: center;
+    }
+    .home-img{
+        margin-top: 15px;
+    }
+    hr{
+        margin: 0 250px;
+    }
 }
-
-
